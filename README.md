@@ -1,7 +1,6 @@
 # Запуск
 
 ```
-cd queuereader-cli
 docker-compose up --build -d
 ```
 ### Добавить сообщения в Kafka и RabbitMQ
