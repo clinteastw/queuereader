@@ -63,8 +63,10 @@ services:
       - .env-dev
     command: ["sleep", "infinity"]
     depends_on:
-      - kafka
-      - rabbitmq
+      kafka:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
     networks:
       - queue-network
 
